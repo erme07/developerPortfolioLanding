@@ -15,12 +15,18 @@ module.exports = {
         'clash' : ['ClashDisplay', 'sans-serif'],
         'corinthia' : ['Corinthia', 'sans-serif']
       },
+      height: {
+        'header': 'calc(100vh - 60px)',
+      },
       colors: {
         'main': '#5DBE8C',
         'second': '#CB75BD',
         'third': '#FFEB5C',
         'fourth':'#5D6CBE'
       },
+      animation: {
+        'spin-slow': 'spin 7s linear infinite',
+      }
     },
     container: {
       center: true,
