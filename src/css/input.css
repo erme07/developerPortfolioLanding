@@ -20,3 +20,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities{
+    .quote{
+        @apply absolute block top-[-55px] left-[35px] text-[200px] text-white font-medium leading-none content-['“'];
+    }
+    .scrollbar{
+        scrollbar-color:#5DBE8C #00000000;
+        scrollbar-width: thin;
+    }
+    .input-form{
+        @apply bg-transparent rounded-[7px] border border-white placeholder:text-white placeholder:text-[14px] text-[14px] p-[15px] w-[340px]
+        focus:outline-none focus:border-third focus:ring-2 focus:ring-third
+        invalid:border-red-500 invalid:text-red-200;
+    }
+    .bubble_a{
+        animation: show 200ms linear 1s forwards;
+    }
+    .bubble_b{
+        animation: show 200ms linear 1.2s forwards;
+    }
+    .show{
+        @apply text-black bg-white fixed;
+    }
+    @keyframes show{
+        from{
+            opacity: 0;
+            transform: translateY(50%);
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}

@@ -1,25 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scrollbar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./src/css/output.css" rel="stylesheet">
+    <script src="./src/js/script.js" defer></script>
     <title>Document</title>
 </head>
-<body class="font-clash font-normal bg-black text-white relative">
-    <nav class="h-[60px] absolute top-0 w-full left-0">
+<body class="font-clash bg-black font-normal text-white relative overflow-x-hidden">
+    <nav class="h-[60px] sticky top-[-60px] mb-[-60px] w-full left-0 z-30">
         <div class="container flex items-center justify-end h-full">
-            <svg class="" width="34" height="35" viewBox="0 0 44 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.5 10.0779H38.5M5.5 22.9112H38.5M5.5 35.7445H38.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <svg id="menu-button" class=" rounded-full p-[10px] size-[45px] hover:bg-white hover:text-black cursor-pointer z-50 transition-all peer" viewBox="0 0 44 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="pointer-events-none" d="M5.5 10.0779H38.5M5.5 22.9112H38.5M5.5 35.7445H38.5" stroke="currentcolor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-        </div>
-    </nav>
-    <header class="container grid grid-cols-12">
-        <div class="col-span-7 flex flex-col justify-end h-full gap-6 pb-[30px] min-h-screen">
-            <h1 class="flex flex-col"><span class="block text-[50px] text-[#5F6377] leading-none">{ </span><span class="font-normal font-corinthia block text-[100px] leading-none pl-[8px]">I'm James</span><span class="font-bold text-[140px] leading-[102px] text-third">Thomas</span></h1>
-            <p class="text-[30px] leading-[1.18]"><span class="block">I like making <span class="uppercase font-bold text-main">fun</span>,</span> <span class="block">interactive things with </span><span class="block">code. I also <span class="uppercase font-bold text-main">talk</span> & <span class="uppercase font-bold text-main">write</span></span> about those things.</p>
-            <div class="flex gap-[20px] text-[24px] text-black">
-                <button class="bg-third flex items-center justify-between w-[210px] h-[50px] px-[22px] rounded-[7px]">
+            <div id="menu" class="overflow-hidden text-[24px] fixed -translate-y-full top-0 w-full left-0 h-screen bg-[rgb(0,0,0,.8)] backdrop-blur-2xl peer-[.show]:translate-y-0 transition-all duration-500 z-40 flex flex-col items-center justify-center gap-[25px] text-black">
+                <h3 class="flex flex-col text-center"><span class="font-normal font-corinthia block text-white text-[35px] leading-none">I'm James</span><span class="font-bold text-[50px] leading-[30px] text-third">Thomas</span></h3>
+                <ul class="flex flex-col gap-[5px] items-center text-white">
+                    <li class="hover:bg-third hover:text-black p-[5px_15px] rounded-[7px] transition-all"><a href="">About Me</a></li>
+                    <li class="hover:bg-third hover:text-black p-[5px_15px] rounded-[7px] transition-all"><a href="">Skills</a></li>
+                    <li class="hover:bg-third hover:text-black p-[5px_15px] rounded-[7px] transition-all"><a href="">Testimonial</a></li>
+                    <li class="hover:bg-third hover:text-black p-[5px_15px] rounded-[7px] transition-all"><a href="">My Work</a></li>
+                </ul>
+                <button class="bg-third flex items-center justify-between w-[210px] h-[50px] px-[22px] rounded-[7px] group relative shadow-[-3px_-3px_0px_0px_rgba(0,0,0,0.3)_inset]">
                     <span class="flex items-center">
                         <svg class="mr-[6px]" width="24" height="24">
                             <use href="./assets/icons/icons.svg#sms"></use>
@@ -27,29 +29,87 @@
                         <span>
                             hire<span class="uppercase font-bold"> me</span>
                         </span>
-                        
                     </span>
-                    <svg class="" width="30" height="29">
+                    <svg class="group-hover:rotate-45 transition-all " width="30" height="30">
                         <use href="./assets/icons/icons.svg#indicator"></use>
                     </svg>
                 </button>
-                <button class="bg-second w-[195px] h-[50px] px-[22px] rounded-[7px]"><span class="uppercase font-bold">see</span> portfolio</button>
+                <svg class="absolute right-0 translate-x-1/2 translate-y-1/2 bottom-0 size-[480px]" viewBox="0 0 458 458" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M274.8 32.7143C274.8 14.6467 260.153 0 242.085 0H215.914C197.847 0 183.2 14.6467 183.2 32.7143V39.4496C183.2 68.5949 147.962 83.1909 127.353 62.582L122.591 57.8195C109.815 45.0438 89.1014 45.0438 76.3255 57.8195L57.8195 76.3255C45.0438 89.1012 45.0438 109.815 57.8195 122.591L62.5823 127.353C83.1911 147.962 68.5951 183.2 39.4498 183.2H32.7143C14.6467 183.2 0 197.847 0 215.914V242.085C0 260.153 14.6467 274.8 32.7143 274.8H39.4496C68.5951 274.8 83.1911 310.039 62.5823 330.646L57.8195 335.409C45.0438 348.185 45.0438 368.898 57.8195 381.674L76.3255 400.18C89.1014 412.956 109.815 412.956 122.591 400.18L127.353 395.417C147.962 374.809 183.2 389.405 183.2 418.55V425.285C183.2 443.353 197.847 458 215.914 458H242.085C260.153 458 274.8 443.353 274.8 425.285V418.55C274.8 389.405 310.039 374.809 330.646 395.417L335.409 400.18C348.185 412.956 368.898 412.956 381.674 400.18L400.18 381.674C412.956 368.898 412.956 348.185 400.18 335.409L395.419 330.646C374.809 310.039 389.405 274.8 418.55 274.8H425.285C443.353 274.8 458 260.153 458 242.085V215.914C458 197.847 443.353 183.2 425.285 183.2H418.55C389.405 183.2 374.809 147.962 395.417 127.353L400.18 122.59C412.956 109.815 412.956 89.1012 400.18 76.3255L381.674 57.8195C368.898 45.0436 348.185 45.0436 335.409 57.8195L330.646 62.582C310.039 83.1909 274.8 68.5949 274.8 39.4496V32.7143Z" fill="#CB75BD"/>
+                </svg>
+                <svg class="absolute left-[-240px] top-[-240px] size-[480px] animate-spin-slow" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M31.2 0H20.8V13.4461L11.2922 3.93827L3.93827 11.2922L13.4461 20.8H0V31.2H13.4461L3.93827 40.7077L11.2922 48.0618L20.8 38.5538V52H31.2V38.5538L40.7079 48.0618L48.0618 40.7079L38.5538 31.2H52V20.8H38.5538L48.0618 11.2922L40.7079 3.93825L31.2 13.4461V0Z" fill="white"/>
+                </svg>
             </div>
         </div>
-        <div class="col-span-5 flex justify-end items-end relative">
-            <div class="bg-main w-[320px] h-[460px] absolute bottom-0 -z-10 rounded-[250px_250px_0_0] mr-[20px]"></div>
-            <img src="./assets/img/elegant-man-suit-arms-crossed 1.png" alt="" class="w-[360px] h-auto">
+    </nav>
+    <header class="relative before:inset-0 before:absolute before:bg-[url('../../assets/img/bg_1.jpg')] before:opacity-40">
+        <div class="container grid grid-cols-12 relative min-h-screen pt-[60px]">
+            <div class="col-span-7 flex flex-col justify-end gap-6 ">
+                <h1 class="flex flex-col"><span class="block text-[50px] text-[#5F6377] leading-none">{ </span><span class="font-normal font-corinthia block text-[110px] leading-none pl-[8px]">I'm James</span><span class="font-bold text-[146px] leading-[102px] text-third">Thomas</span></h1>
+                <p class="text-[33px] leading-[1.18]"><span class="block">I like making <span class="uppercase font-bold text-main">fun</span>,</span> <span class="block">interactive things with </span><span class="block">code. I also <span class="uppercase font-bold text-main">talk</span> & <span class="uppercase font-bold text-main">write</span></span> about those things.</p>
+                <div class="flex gap-[20px] text-[24px] text-black  mb-[40px]">
+                    <button class="bg-third flex items-center justify-between w-[210px] h-[50px] px-[22px] rounded-[7px] group relative shadow-[-3px_-3px_0px_0px_rgba(0,0,0,0.3)_inset]">
+                        <span class="flex items-center">
+                            <svg class="mr-[6px]" width="24" height="24">
+                                <use href="./assets/icons/icons.svg#sms"></use>
+                            </svg>
+                            <span>
+                                hire<span class="uppercase font-bold"> me</span>
+                            </span>
+                        </span>
+                        <svg class="group-hover:rotate-45 transition-all " width="30" height="30">
+                            <use href="./assets/icons/icons.svg#indicator"></use>
+                        </svg>
+                    </button>
+                    <button class="bg-second w-[195px] h-[50px] px-[22px] rounded-[7px] shadow-[-3px_-3px_0px_0px_rgba(0,0,0,0.3)_inset]"><span class="uppercase font-bold">see</span> portfolio</button>
+                </div>
+            </div>
+            <div class="col-span-5 flex justify-end items-end relative">
+                <div class="bg-main w-[340px] h-[500px] absolute bottom-0 rounded-[250px_250px_0_0] mr-[20px]"></div>
+                <img src="./assets/img/profile.webp" alt="" class="w-[380px] h-auto relative">
+                <div class="bubble_a font-semibold text-[18px] bg-white text-black absolute w-[210px] h-[65px] flex items-center justify-center left-0 bottom-[14%] opacity-0 rounded-[20px_20px_0_20px] shadow-[-3px_-3px_0px_0px_rgba(0,0,0,0.3)_inset]">App Development</div>
+                <div class="bubble_b font-semibold text-[18px] bg-white text-black absolute flex items-center justify-center w-[155px] h-[65px] right-[-60px] bottom-[45%] opacity-0 rounded-[20px_20px_20px_0] shadow-[-3px_-3px_0px_0px_rgba(0,0,0,0.3)_inset]">Data Analysis</div>
+            </div>
+            <img src="./assets/img/hojas.svg" alt="" class="absolute bottom-[100px] left-0 -translate-x-full w-[80px]">
         </div>
     </header>
-    <section class="h-[100px] bg-main">
-        <div class="container"></div>
+
+    <section class=" bg-main relative" id="stats">
+        <svg class="absolute left-0 bottom-0 size-[90px] -translate-x-1/2 translate-y-1/2 z-10" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M31.2 0H20.8V13.4461L11.2922 3.93827L3.93827 11.2922L13.4461 20.8H0V31.2H13.4461L3.93827 40.7077L11.2922 48.0618L20.8 38.5538V52H31.2V38.5538L40.7079 48.0618L48.0618 40.7079L38.5538 31.2H52V20.8H38.5538L48.0618 11.2922L40.7079 3.93825L31.2 13.4461V0Z" fill="white"/>
+        </svg>
+        <div class="container flex justify-center py-[40px] text-black relative">
+            <svg class="absolute right-0 top-0 -translate-y-1/2 translate-x-full size-[50px]" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M31.2 0H20.8V13.4461L11.2922 3.93827L3.93827 11.2922L13.4461 20.8H0V31.2H13.4461L3.93827 40.7077L11.2922 48.0618L20.8 38.5538V52H31.2V38.5538L40.7079 48.0618L48.0618 40.7079L38.5538 31.2H52V20.8H38.5538L48.0618 11.2922L40.7079 3.93825L31.2 13.4461V0Z" fill="white"/>
+            </svg>
+            <div class="w-[230px] text-center">
+                <span class="text-[54px] font-bold leading-none" id="years" data-value="7">7+</span>
+                <p class="text-[20px]">years of <span class="block"></span><span class="font-bold">experience</span></p>
+            </div>
+            <div class="w-[230px] text-center border-x-[1px] border-black">
+                <span class="text-[54px] font-bold leading-none" id="projects" data-value="50">50+</span>
+                <p class="text-[20px]">complete <span class="block"></span><span class="font-bold">projects</span></p>
+            </div>
+            <div class="w-[230px] text-center">
+                <span class="text-[54px] font-bold leading-none" id="customer" data-value="30">30+</span>
+                <p class="text-[20px]">Happy <span class="block"></span><span class="font-bold">customer</span></p>
+            </div>
+        </div>
     </section>
-    <section>
-        <div class="container flex items-center py-[60px]">
+
+    <section class="relative before:inset-0 before:absolute before:bg-[url('../../assets/img/bg_2.jpg')] before:opacity-40">
+        <div class="container flex items-center py-[70px] relative">
+            <svg class="absolute left-0 bottom-0 translate-y-1/2 -translate-x-1/2 size-[90px]" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M31.2 0H20.8V13.4461L11.2922 3.93827L3.93827 11.2922L13.4461 20.8H0V31.2H13.4461L3.93827 40.7077L11.2922 48.0618L20.8 38.5538V52H31.2V38.5538L40.7079 48.0618L48.0618 40.7079L38.5538 31.2H52V20.8H38.5538L48.0618 11.2922L40.7079 3.93825L31.2 13.4461V0Z" fill="white"/>
+            </svg>
+            <svg class="absolute right-0 translate-x-[87%] bottom-0 size-[458px]" viewBox="0 0 458 458" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M274.8 32.7143C274.8 14.6467 260.153 0 242.085 0H215.914C197.847 0 183.2 14.6467 183.2 32.7143V39.4496C183.2 68.5949 147.962 83.1909 127.353 62.582L122.591 57.8195C109.815 45.0438 89.1014 45.0438 76.3255 57.8195L57.8195 76.3255C45.0438 89.1012 45.0438 109.815 57.8195 122.591L62.5823 127.353C83.1911 147.962 68.5951 183.2 39.4498 183.2H32.7143C14.6467 183.2 0 197.847 0 215.914V242.085C0 260.153 14.6467 274.8 32.7143 274.8H39.4496C68.5951 274.8 83.1911 310.039 62.5823 330.646L57.8195 335.409C45.0438 348.185 45.0438 368.898 57.8195 381.674L76.3255 400.18C89.1014 412.956 109.815 412.956 122.591 400.18L127.353 395.417C147.962 374.809 183.2 389.405 183.2 418.55V425.285C183.2 443.353 197.847 458 215.914 458H242.085C260.153 458 274.8 443.353 274.8 425.285V418.55C274.8 389.405 310.039 374.809 330.646 395.417L335.409 400.18C348.185 412.956 368.898 412.956 381.674 400.18L400.18 381.674C412.956 368.898 412.956 348.185 400.18 335.409L395.419 330.646C374.809 310.039 389.405 274.8 418.55 274.8H425.285C443.353 274.8 458 260.153 458 242.085V215.914C458 197.847 443.353 183.2 425.285 183.2H418.55C389.405 183.2 374.809 147.962 395.417 127.353L400.18 122.59C412.956 109.815 412.956 89.1012 400.18 76.3255L381.674 57.8195C368.898 45.0436 348.185 45.0436 335.409 57.8195L330.646 62.582C310.039 83.1909 274.8 68.5949 274.8 39.4496V32.7143Z" fill="#CB75BD"/>
+            </svg>
             <object type="image/svg+xml" data="./assets/img/animacion.svg" class="basis-[55%] w-[609px] h-[512px]"></object>
             <div class="flex flex-col basis-[45%] pl-[15px] gap-[20px]">
                 <h2 class="text-[50px] font-semibold pl-[15px] leading-[60px]">My Professional background</h2>
-                <p class="pl-[15px]">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,</p>
+                <p class="pl-[15px] pr-[30px]">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,</p>
                 <div class="flex items-center gap-[15px] border-b-2 border-[#ffffff33] pb-[20px] px-[15px]">
                     <div class="w-[44px] h-[44px] bg-second text-black flex items-center justify-center shrink-0 text-[24px] font-semibold rounded-[2px]"><span>01</span></div>
                     <div class="inline-flex flex-col">
@@ -81,13 +141,192 @@
             </div>
         </div>
     </section>
-    <section class="bg-main h-[200px]">
-        <div class="container">
 
+    <section class="bg-main text-black py-[50px] relative">
+        <div class="container flex flex-col items-center text-center relative z-10">
+            <h2 class="text-[54px] font-semibold">Family Background</h2>
+            <p class="text-[18px] font-medium opacity-60 w-[870px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type!</p>
+        </div>
+        <div class="grid grid-cols-4 gap-[20px] relative">
+            <img src="./assets/img/Ellipse 9.svg" alt="" class="absolute top-0 -translate-y-1/2 w-full">
+            <div class="col-span-1">
+                <img src="./assets/img/family_a.webp" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/img/family_b.webp" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/img/family_c.webp" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/img/family_d.webp" alt="">
+            </div>
+            <img src="./assets/img/Ellipse 9.svg" alt="" class="absolute bottom-0 translate-y-1/2 w-full">
         </div>
     </section>
+
+    <section class="py-[70px] relative before:inset-0 before:absolute before:bg-[url('../../assets/img/bg_2.jpg')] before:opacity-40">
+        <svg class="absolute left-0 bottom-0 -translate-x-1/2 translate-y-1/2 size-[90px] z-10" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M31.2 0H20.8V13.4461L11.2922 3.93827L3.93827 11.2922L13.4461 20.8H0V31.2H13.4461L3.93827 40.7077L11.2922 48.0618L20.8 38.5538V52H31.2V38.5538L40.7079 48.0618L48.0618 40.7079L38.5538 31.2H52V20.8H38.5538L48.0618 11.2922L40.7079 3.93825L31.2 13.4461V0Z" fill="white"/>
+        </svg>
+        <div class="container flex flex-col items-center gap-[35px] relative">
+            <h2 class="text-[54px] font-semibold text-center leading-none">Some of my latest <span class="uppercase font-bold text-main">WORK</span></h2>
+            <p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been <span class="block"></span> the industry's standard dummy text ever since the 1500s....</p>
+            <div class="grid grid-cols-12 gap-[20px]">
+                <div class="col-span-6 bg-white rounded-[20px] shadow-[-8px_-8px_0px_0px_rgba(0,0,0,0.3)_inset] p-[25px] pb-[40px] text-black text-center flex flex-col items-center gap-[20px]">
+                    <div class="border-2 border-[#b2b2b2] rounded-[14px] overflow-hidden">
+                        <img src="./assets/img/card.webp" alt="">
+                    </div>
+                    <h3 class="font-semibold text-[32px] leading-none">Break-Even Analysis</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <button class="bg-main rounded-[7px] text-[20px] shadow-[-3px_-3px_0px_0px_rgba(0,0,0,0.3)_inset] text-white flex w-[185px] h-[50px] justify-evenly items-center px-[10px] group">View <span class="uppercase font-bold">more</span>
+                        <svg class="group-hover:rotate-45 transition-all" width="30" height="30">
+                            <use href="./assets/icons/icons.svg#indicator"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="col-span-6 bg-white rounded-[20px] shadow-[-8px_-8px_0px_0px_rgba(0,0,0,0.3)_inset] p-[25px] pb-[40px] text-black text-center flex flex-col items-center gap-[20px]">
+                    <div class="border-2 border-[#b2b2b2] rounded-[14px] overflow-hidden">
+                        <img src="./assets/img/card.webp" alt="">
+                    </div>
+                    <h3 class="font-semibold text-[32px] leading-none">Break-Even Analysis</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <button class="bg-main rounded-[7px] text-[20px] shadow-[-3px_-3px_0px_0px_rgba(0,0,0,0.3)_inset] text-white flex w-[185px] h-[50px] justify-evenly items-center px-[10px] group">View <span class="uppercase font-bold">more</span>
+                        <svg class="group-hover:rotate-45 transition-all" width="30" height="30">
+                            <use href="./assets/icons/icons.svg#indicator"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pt-[40px] pb-[120px] relative before:inset-0 before:absolute before:bg-[url('../../assets/img/bg_2.jpg')] before:opacity-40">
+        <div class="container flex flex-col items-center justify-center gap-[30px] relative">
+            <h2 class="font-semibold text-[54px] text-center leading-none">Client <span class="uppercase text-main">testimonials</span></h2>
+            <p class="block max-w-[980px] text-[18px] text-center font-medium opacity-60 mb-[50px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+            <div class="w-full max-w-[980px] flex flex-col gap-10">
+                <div class="bg-main text-black w-full lg:h-[165px] py-10 px-5 sm:py-8 sm:px-8 rounded-[2px] relative before:quote" id="container-reviews">
+                    <div class="size-full flex items-center overflow-hidden">
+                        <div class="size-full shrink-0 flex items-center transition-all duration-500 delay-200" data-name="review">
+                            <p class="text-center px-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s.....</p>
+                        </div>
+                        <div class="size-full shrink-0 flex items-center transition-all duration-500 delay-200" data-name="review">
+                            <p class="text-center px-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It was popularised in the 1960s.....</p>
+                        </div>
+                        <div class="size-full shrink-0 flex items-center transition-all duration-500 delay-200" data-name="review">
+                            <p class="text-center px-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s.....</p>
+                        </div>
+                        <div class="size-full shrink-0 flex items-center transition-all duration-500 delay-200" data-name="review">
+                            <p class="text-center px-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s.....</p>
+                        </div>
+                        <div class="size-full shrink-0 flex items-center transition-all duration-500 delay-200" data-name="review">
+                            <p class="text-center px-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s.....</p>
+                        </div>
+                        <div class="size-full shrink-0 flex items-center transition-all duration-500 delay-200" data-name="review">
+                            <p class="text-center px-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s.....</p>
+                        </div>
+                    </div>
+                    <svg class="fill-main w-[26px] h-[25px] absolute bottom-[-25px] left-[27px] transition-all" id="pointer" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" stroke="none">
+                        <path d="M0 0h10l-5 10L0 0z"></path>
+                    </svg>
+                </div>
+                <div class="flex lg:gap-9 justify-between costumers">
+                        <div class="flex flex-col lg:flex-row items-center active-client group" data-name="client">
+                            <img src="./assets/img/client_a.webp" alt="" class="w-[80px] cursor-pointer rounded-full shrink-0 outline-offset-2 outline-main transition-[outline] hover:outline" title="Scarlett Thomas" data-number="0">
+                            <div class="hidden lg:block costumer overflow-hidden whitespace-nowrap max-w-0 transition-all duration-200 ml-0 group-[.active-client]:max-w-[350px] group-[.active-client]:ml-5">
+                                <h3 class="font-medium text-[24px]">Thomas Parker</h3>
+                                <p>Singapore</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col lg:flex-row items-center group" data-name="client">
+                            <img src="./assets/img/client_b.webp" alt="" class="w-[80px] cursor-pointer rounded-full shrink-0 outline-offset-2 outline-main transition-[outline] hover:outline" title="Sophie Lincon" data-number="1">
+                            <div class="hidden lg:block costumer overflow-hidden whitespace-nowrap max-w-0 transition-all duration-200 ml-0 group-[.active-client]:max-w-[350px] group-[.active-client]:ml-5">
+                                <h3 class="font-medium text-[24px]">Lincon Brown</h3>
+                                <p>Sidney</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col lg:flex-row items-center group" data-name="client">
+                            <img src="./assets/img/client_c.webp" alt="" class="w-[80px] cursor-pointer rounded-full shrink-0 outline-offset-2 outline-main transition-[outline] hover:outline" title="Michelle Girou" data-number="2">
+                            <div class="hidden lg:block costumer overflow-hidden whitespace-nowrap max-w-0 transition-all duration-200 ml-0 group-[.active-client]:max-w-[350px] group-[.active-client]:ml-5">
+                                <h3 class="font-medium text-[24px]">Michelle Girou</h3>
+                                <p>Paris</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col lg:flex-row items-center group" data-name="client">
+                            <img src="./assets/img/client_d.webp" alt="" class="w-[80px] cursor-pointer rounded-full shrink-0 outline-offset-2 outline-main transition-[outline] hover:outline" title="Julia De Santis" data-number="3">
+                            <div class="hidden lg:block costumer overflow-hidden whitespace-nowrap max-w-0 transition-all duration-200 ml-0 group-[.active-client]:max-w-[350px] group-[.active-client]:ml-5">
+                                <h3 class="font-medium text-[24px]">Julia De Santis</h3>
+                                <p>Venecia</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col lg:flex-row items-center group" data-name="client">
+                            <img src="./assets/img/client_e.webp" alt="" class="w-[80px] cursor-pointer rounded-full shrink-0 outline-offset-2 outline-main transition-[outline] hover:outline" title="Aitana Ferrer" data-number="4">
+                            <div class="hidden lg:block costumer overflow-hidden whitespace-nowrap max-w-0 transition-all duration-200 ml-0 group-[.active-client]:max-w-[350px] group-[.active-client]:ml-5">
+                                <h3 class="font-medium text-[24px]">Aitana Ferrer</h3>
+                                <p>Ibiza</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col lg:flex-row items-center group" data-name="client">
+                            <img src="./assets/img/client_f.webp" alt="" class="w-[80px] cursor-pointer rounded-full shrink-0 outline-offset-2 outline-main transition-[outline] hover:outline" title="Andrea Peralta" data-number="5">
+                            <div class="hidden lg:block costumer overflow-hidden whitespace-nowrap max-w-0 transition-all duration-200 ml-0 group-[.active-client]:max-w-[350px] group-[.active-client]:ml-5">
+                                <h3 class="font-medium text-[24px]">Andres Peralta</h3>
+                                <p>Buenos Aires</p>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="relative before:inset-0 before:absolute before:bg-[url('../../assets/img/bg_2.jpg')] before:opacity-40">
+        <div class="container relative">
+            <svg class="absolute left-[50px] top-[180px] size-[230px] animate-spin-slow" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M31.2 0H20.8V13.4461L11.2922 3.93827L3.93827 11.2922L13.4461 20.8H0V31.2H13.4461L3.93827 40.7077L11.2922 48.0618L20.8 38.5538V52H31.2V38.5538L40.7079 48.0618L48.0618 40.7079L38.5538 31.2H52V20.8H38.5538L48.0618 11.2922L40.7079 3.93825L31.2 13.4461V0Z" fill="white"/>
+            </svg>
+            <svg class="absolute right-0 translate-x-[330px] top-[-210px]" width="458" height="458" viewBox="0 0 458 458" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M274.8 32.7143C274.8 14.6467 260.153 0 242.085 0H215.914C197.847 0 183.2 14.6467 183.2 32.7143V39.4496C183.2 68.5949 147.962 83.1909 127.353 62.582L122.591 57.8195C109.815 45.0438 89.1014 45.0438 76.3255 57.8195L57.8195 76.3255C45.0438 89.1012 45.0438 109.815 57.8195 122.591L62.5823 127.353C83.1911 147.962 68.5951 183.2 39.4498 183.2H32.7143C14.6467 183.2 0 197.847 0 215.914V242.085C0 260.153 14.6467 274.8 32.7143 274.8H39.4496C68.5951 274.8 83.1911 310.039 62.5823 330.646L57.8195 335.409C45.0438 348.185 45.0438 368.898 57.8195 381.674L76.3255 400.18C89.1014 412.956 109.815 412.956 122.591 400.18L127.353 395.417C147.962 374.809 183.2 389.405 183.2 418.55V425.285C183.2 443.353 197.847 458 215.914 458H242.085C260.153 458 274.8 443.353 274.8 425.285V418.55C274.8 389.405 310.039 374.809 330.646 395.417L335.409 400.18C348.185 412.956 368.898 412.956 381.674 400.18L400.18 381.674C412.956 368.898 412.956 348.185 400.18 335.409L395.419 330.646C374.809 310.039 389.405 274.8 418.55 274.8H425.285C443.353 274.8 458 260.153 458 242.085V215.914C458 197.847 443.353 183.2 425.285 183.2H418.55C389.405 183.2 374.809 147.962 395.417 127.353L400.18 122.59C412.956 109.815 412.956 89.1012 400.18 76.3255L381.674 57.8195C368.898 45.0436 348.185 45.0436 335.409 57.8195L330.646 62.582C310.039 83.1909 274.8 68.5949 274.8 39.4496V32.7143Z" fill="#CB75BD"/>
+            </svg>
+        </div>
+        <div class="absolute inset-x-0 bottom-0 h-[500px] bg-main">
+            <svg class="translate-y-[-98%] w-screen" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="eUtlIiZH1hN1" viewBox="0 0 1366 191" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+                <path d="M0,84c0,0,171,189,683,0s683,0,683,0v107.139737h-1366L0,84Z" fill="#5dbe8c"/>
+            </svg>
+        </div>
+        <div class="container grid grid-cols-12 gap-[20px] relative">
+            <div class="col-span-6 flex flex-col gap-[20px] justify-end pb-[115px] pr-[30px] text-black">
+                <h2 class="font-semibold text-[54px] leading-tight">Let's discuss Incoming project</h2>
+                <p class="text-[16px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged...</p>
+            </div>
+            <div class="col-span-6 ml-[30px] relative">
+                <svg class="absolute bottom-[20px] left-0 -translate-x-1/2 h-[150px] w-[150px]" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="75" cy="75" r="75" fill="#FFEB5C"/>
+                </svg>
+                <svg class="absolute top-[200px] right-0 translate-x-1/2 h-[90px] w-[90px]" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="75" cy="75" r="75" fill="#FFEB5C"/>
+                </svg>
+                <form class="flex flex-col items-center bg-[rgb(255,255,255,.13)] rounded-[36px_36px_0_0] p-[40px] gap-[26px] backdrop-blur-[14px] border border-[rgb(255,255,255,.55)]">
+                    <label class="font-semibold text-[32px] text-center leading-[40px]">Need a help? <span class="block"></span> Don't worry just contact us</label>
+                    <input type="text" pattern="[A-Za-z]+" class="input-form" placeholder="Your Name">
+                    <input type="email" class="input-form " placeholder="Email Id">
+                    <input type="tel" pattern="[0-9]+" class="input-form " placeholder="Phone Number">
+                    <input type="text" class="input-form " placeholder="Skype / Google Id">
+                    <input type="text" class="input-form " placeholder="Interested In">
+                    <textarea class="input-form h-[158px]" placeholder="Message"></textarea>
+                    <button class="bg-white text-main h-[50px] w-[135px] text-[20px] font-semibold rounded-[7px] shadow-[-3px_-3px_0px_0px_rgba(0,0,0,0.3)_inset]">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-black">
+        <div class="w-full max-w-[1500px] m-auto">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1642.0023762978815!2d-58.3833567555457!3d-34.60404133063199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac59a5bd441%3A0x25d75cd7b8299b7d!2sAv.%20Corrientes%2C%20C1010%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1732487873590!5m2!1ses-419!2sar" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
     <footer class="bg-dark text-white">
-        
         <div class="container grid grid-cols-12 gap-[20px] py-[70px]">
             <div class="col-span-5 flex flex-col items-start">
                 <a href="" class="flex items-center gap-4">
@@ -118,9 +357,9 @@
                     
                     <h4 class="text-[24px] font-bold">Subscribe</h4>
                     <form action="" class="h-[75px] bg-[rgba(255,255,255,0.13)] rounded-[15px] p-[8px] flex flex-wrap items-center gap-3 border border-[rgba(255,255,255,0.65)]">
-                        <input type="email" class="bg-transparent grow pl-[20px] pr-[20px] rounded-lg" placeholder="Input your email address in here">
+                        <input type="email" class="bg-transparent h-full text-white placeholder:text-white grow pl-[20px] pr-[20px] rounded-lg" placeholder="Input your email address in here">
                         <button class="w-[54px] h-[54px] rounded-lg bg-main flex items-center justify-center">
-                            <svg class="" width="30" height="30">
+                            <svg class="text-white" width="30" height="30">
                                 <use href="./assets/icons/icons.svg#indicator"></use>
                             </svg>
                         </button>
