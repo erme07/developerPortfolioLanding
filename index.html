@@ -8,41 +8,47 @@
     <title>Document</title>
 </head>
 <body class="font-clash bg-black font-normal text-white relative overflow-x-hidden">
-    <nav class="h-[60px] sticky top-[-60px] mb-[-60px] w-full left-0 z-30">
-        <div class="container flex items-center justify-end h-full">
-            <svg id="menu-button" class=" rounded-full p-[10px] size-[45px] hover:bg-white hover:text-black cursor-pointer z-50 transition-all peer" viewBox="0 0 44 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="pointer-events-none" d="M5.5 10.0779H38.5M5.5 22.9112H38.5M5.5 35.7445H38.5" stroke="currentcolor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <div id="menu" class="overflow-hidden text-[24px] fixed -translate-y-full top-0 w-full left-0 h-screen bg-[rgb(0,0,0,.8)] backdrop-blur-2xl peer-[.show]:translate-y-0 transition-all duration-500 z-40 flex flex-col items-center justify-center gap-[25px] text-black">
-                <h3 class="flex flex-col text-center"><span class="font-normal font-corinthia block text-white text-[35px] leading-none">I'm James</span><span class="font-bold text-[50px] leading-[30px] text-third">Thomas</span></h3>
-                <ul class="flex flex-col gap-[5px] items-center text-white">
-                    <li class="hover:bg-third hover:text-black p-[5px_15px] rounded-[7px] transition-all"><a href="">About Me</a></li>
-                    <li class="hover:bg-third hover:text-black p-[5px_15px] rounded-[7px] transition-all"><a href="">Skills</a></li>
-                    <li class="hover:bg-third hover:text-black p-[5px_15px] rounded-[7px] transition-all"><a href="">Testimonial</a></li>
-                    <li class="hover:bg-third hover:text-black p-[5px_15px] rounded-[7px] transition-all"><a href="">My Work</a></li>
-                </ul>
-                <button class="bg-third flex items-center justify-between w-[210px] h-[50px] px-[22px] rounded-[7px] group relative shadow-[-3px_-3px_0px_0px_rgba(0,0,0,0.3)_inset]">
-                    <span class="flex items-center">
-                        <svg class="mr-[6px]" width="24" height="24">
-                            <use href="./assets/icons/icons.svg#sms"></use>
-                        </svg>
-                        <span>
-                            hire<span class="uppercase font-bold"> me</span>
-                        </span>
-                    </span>
-                    <svg class="group-hover:rotate-45 transition-all " width="30" height="30">
-                        <use href="./assets/icons/icons.svg#indicator"></use>
-                    </svg>
-                </button>
-                <svg class="absolute right-0 translate-x-1/2 translate-y-1/2 bottom-0 size-[480px]" viewBox="0 0 458 458" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M274.8 32.7143C274.8 14.6467 260.153 0 242.085 0H215.914C197.847 0 183.2 14.6467 183.2 32.7143V39.4496C183.2 68.5949 147.962 83.1909 127.353 62.582L122.591 57.8195C109.815 45.0438 89.1014 45.0438 76.3255 57.8195L57.8195 76.3255C45.0438 89.1012 45.0438 109.815 57.8195 122.591L62.5823 127.353C83.1911 147.962 68.5951 183.2 39.4498 183.2H32.7143C14.6467 183.2 0 197.847 0 215.914V242.085C0 260.153 14.6467 274.8 32.7143 274.8H39.4496C68.5951 274.8 83.1911 310.039 62.5823 330.646L57.8195 335.409C45.0438 348.185 45.0438 368.898 57.8195 381.674L76.3255 400.18C89.1014 412.956 109.815 412.956 122.591 400.18L127.353 395.417C147.962 374.809 183.2 389.405 183.2 418.55V425.285C183.2 443.353 197.847 458 215.914 458H242.085C260.153 458 274.8 443.353 274.8 425.285V418.55C274.8 389.405 310.039 374.809 330.646 395.417L335.409 400.18C348.185 412.956 368.898 412.956 381.674 400.18L400.18 381.674C412.956 368.898 412.956 348.185 400.18 335.409L395.419 330.646C374.809 310.039 389.405 274.8 418.55 274.8H425.285C443.353 274.8 458 260.153 458 242.085V215.914C458 197.847 443.353 183.2 425.285 183.2H418.55C389.405 183.2 374.809 147.962 395.417 127.353L400.18 122.59C412.956 109.815 412.956 89.1012 400.18 76.3255L381.674 57.8195C368.898 45.0436 348.185 45.0436 335.409 57.8195L330.646 62.582C310.039 83.1909 274.8 68.5949 274.8 39.4496V32.7143Z" fill="#CB75BD"/>
-                </svg>
-                <svg class="absolute left-[-240px] top-[-240px] size-[480px] animate-spin-slow" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M31.2 0H20.8V13.4461L11.2922 3.93827L3.93827 11.2922L13.4461 20.8H0V31.2H13.4461L3.93827 40.7077L11.2922 48.0618L20.8 38.5538V52H31.2V38.5538L40.7079 48.0618L48.0618 40.7079L38.5538 31.2H52V20.8H38.5538L48.0618 11.2922L40.7079 3.93825L31.2 13.4461V0Z" fill="white"/>
+    <nav>
+        <div id="navbar" class="h-[60px] absolute top-0 w-full left-0 z-50">
+            <div class="container flex items-center justify-between h-full">
+                <h3 id="logo" class="opacity-0 items-center gap-[10px] transition-all"><span class="font-normal font-corinthia text-white text-[30px] leading-none">James </span><span class="font-bold text-[25px] leading-[30px] text-third">Thomas</span></h3>
+                <svg id="menu-button" class=" bars shadow-md" viewBox="0 0 100 100" fill="none">
+                    <path class="line top pointer-events-none" stroke="currentcolor" d="m 30,33 h 40 c 13.100415,0 14.380204,31.80258 6.899646,33.421777 -24.612039,5.327373 9.016154,-52.337577 -12.75751,-30.563913 l -28.284272,28.284272"></path>
+                    <path class="line middle pointer-events-none" stroke="currentcolor" d="m 70,50 c 0,0 -32.213436,0 -40,0 -7.786564,0 -6.428571,-4.640244 -6.428571,-8.571429 0,-5.895471 6.073743,-11.783399 12.286435,-5.570707 6.212692,6.212692 28.284272,28.284272 28.284272,28.284272"></path>
+                    <path class="line bottom pointer-events-none" stroke="currentcolor" d="m 69.575405,67.073826 h -40 c -13.100415,0 -14.380204,-31.80258 -6.899646,-33.421777 24.612039,-5.327373 -9.016154,52.337577 12.75751,30.563913 l 28.284272,-28.284272"></path>
                 </svg>
             </div>
         </div>
+        <div id="menu" class="peer overflow-hidden text-[24px] fixed -translate-y-full top-0 w-full left-0 h-screen bg-[rgb(0,0,0,.8)] backdrop-blur-2xl z-40 flex flex-col items-center justify-center gap-[25px] text-black transition-all duration-[300ms]">
+            <h3 class="flex flex-col text-center"><span class="font-normal font-corinthia block text-white text-[35px] leading-none">I'm James</span><span class="font-bold text-[50px] leading-[30px] text-third">Thomas</span></h3>
+            <ul class="flex flex-col gap-[5px] items-center text-white">
+                <li class="hover:bg-third hover:text-black p-[5px_15px] rounded-[7px] transition-all"><a href="">About Me</a></li>
+                <li class="hover:bg-third hover:text-black p-[5px_15px] rounded-[7px] transition-all"><a href="">Skills</a></li>
+                <li class="hover:bg-third hover:text-black p-[5px_15px] rounded-[7px] transition-all"><a href="">Testimonial</a></li>
+                <li class="hover:bg-third hover:text-black p-[5px_15px] rounded-[7px] transition-all"><a href="">My Work</a></li>
+            </ul>
+            <button class="bg-third flex items-center justify-between w-[210px] h-[50px] px-[22px] rounded-[7px] group relative shadow-[-3px_-3px_0px_0px_rgba(0,0,0,0.3)_inset]">
+                <span class="flex items-center">
+                    <svg class="mr-[6px]" width="24" height="24">
+                        <use href="./assets/icons/icons.svg#sms"></use>
+                    </svg>
+                    <span>
+                        hire<span class="uppercase font-bold"> me</span>
+                    </span>
+                </span>
+                <svg class="group-hover:rotate-45 transition-all " width="30" height="30">
+                    <use href="./assets/icons/icons.svg#indicator"></use>
+                </svg>
+            </button>
+            <svg class="absolute right-0 translate-x-1/2 translate-y-1/2 bottom-0 size-[480px]" viewBox="0 0 458 458" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M274.8 32.7143C274.8 14.6467 260.153 0 242.085 0H215.914C197.847 0 183.2 14.6467 183.2 32.7143V39.4496C183.2 68.5949 147.962 83.1909 127.353 62.582L122.591 57.8195C109.815 45.0438 89.1014 45.0438 76.3255 57.8195L57.8195 76.3255C45.0438 89.1012 45.0438 109.815 57.8195 122.591L62.5823 127.353C83.1911 147.962 68.5951 183.2 39.4498 183.2H32.7143C14.6467 183.2 0 197.847 0 215.914V242.085C0 260.153 14.6467 274.8 32.7143 274.8H39.4496C68.5951 274.8 83.1911 310.039 62.5823 330.646L57.8195 335.409C45.0438 348.185 45.0438 368.898 57.8195 381.674L76.3255 400.18C89.1014 412.956 109.815 412.956 122.591 400.18L127.353 395.417C147.962 374.809 183.2 389.405 183.2 418.55V425.285C183.2 443.353 197.847 458 215.914 458H242.085C260.153 458 274.8 443.353 274.8 425.285V418.55C274.8 389.405 310.039 374.809 330.646 395.417L335.409 400.18C348.185 412.956 368.898 412.956 381.674 400.18L400.18 381.674C412.956 368.898 412.956 348.185 400.18 335.409L395.419 330.646C374.809 310.039 389.405 274.8 418.55 274.8H425.285C443.353 274.8 458 260.153 458 242.085V215.914C458 197.847 443.353 183.2 425.285 183.2H418.55C389.405 183.2 374.809 147.962 395.417 127.353L400.18 122.59C412.956 109.815 412.956 89.1012 400.18 76.3255L381.674 57.8195C368.898 45.0436 348.185 45.0436 335.409 57.8195L330.646 62.582C310.039 83.1909 274.8 68.5949 274.8 39.4496V32.7143Z" fill="#CB75BD"/>
+            </svg>
+            <svg class="absolute left-[-240px] top-[-240px] size-[480px] animate-spin-slow" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M31.2 0H20.8V13.4461L11.2922 3.93827L3.93827 11.2922L13.4461 20.8H0V31.2H13.4461L3.93827 40.7077L11.2922 48.0618L20.8 38.5538V52H31.2V38.5538L40.7079 48.0618L48.0618 40.7079L38.5538 31.2H52V20.8H38.5538L48.0618 11.2922L40.7079 3.93825L31.2 13.4461V0Z" fill="white"/>
+            </svg>
+        </div>
     </nav>
+
     <header class="relative before:inset-0 before:absolute before:bg-[url('../../assets/img/bg_1.jpg')] before:opacity-40">
         <div class="container grid grid-cols-12 relative min-h-screen pt-[60px]">
             <div class="col-span-7 flex flex-col justify-end gap-6 ">
@@ -279,13 +285,12 @@
         </div>
     </section>
 
-
     <section class="relative before:inset-0 before:absolute before:bg-[url('../../assets/img/bg_2.jpg')] before:opacity-40">
         <div class="container relative">
             <svg class="absolute left-[50px] top-[180px] size-[230px] animate-spin-slow" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M31.2 0H20.8V13.4461L11.2922 3.93827L3.93827 11.2922L13.4461 20.8H0V31.2H13.4461L3.93827 40.7077L11.2922 48.0618L20.8 38.5538V52H31.2V38.5538L40.7079 48.0618L48.0618 40.7079L38.5538 31.2H52V20.8H38.5538L48.0618 11.2922L40.7079 3.93825L31.2 13.4461V0Z" fill="white"/>
             </svg>
-            <svg class="absolute right-0 translate-x-[330px] top-[-210px]" width="458" height="458" viewBox="0 0 458 458" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="absolute right-0 translate-x-[330px] top-[-210px] pointer-events-none" width="458" height="458" viewBox="0 0 458 458" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M274.8 32.7143C274.8 14.6467 260.153 0 242.085 0H215.914C197.847 0 183.2 14.6467 183.2 32.7143V39.4496C183.2 68.5949 147.962 83.1909 127.353 62.582L122.591 57.8195C109.815 45.0438 89.1014 45.0438 76.3255 57.8195L57.8195 76.3255C45.0438 89.1012 45.0438 109.815 57.8195 122.591L62.5823 127.353C83.1911 147.962 68.5951 183.2 39.4498 183.2H32.7143C14.6467 183.2 0 197.847 0 215.914V242.085C0 260.153 14.6467 274.8 32.7143 274.8H39.4496C68.5951 274.8 83.1911 310.039 62.5823 330.646L57.8195 335.409C45.0438 348.185 45.0438 368.898 57.8195 381.674L76.3255 400.18C89.1014 412.956 109.815 412.956 122.591 400.18L127.353 395.417C147.962 374.809 183.2 389.405 183.2 418.55V425.285C183.2 443.353 197.847 458 215.914 458H242.085C260.153 458 274.8 443.353 274.8 425.285V418.55C274.8 389.405 310.039 374.809 330.646 395.417L335.409 400.18C348.185 412.956 368.898 412.956 381.674 400.18L400.18 381.674C412.956 368.898 412.956 348.185 400.18 335.409L395.419 330.646C374.809 310.039 389.405 274.8 418.55 274.8H425.285C443.353 274.8 458 260.153 458 242.085V215.914C458 197.847 443.353 183.2 425.285 183.2H418.55C389.405 183.2 374.809 147.962 395.417 127.353L400.18 122.59C412.956 109.815 412.956 89.1012 400.18 76.3255L381.674 57.8195C368.898 45.0436 348.185 45.0436 335.409 57.8195L330.646 62.582C310.039 83.1909 274.8 68.5949 274.8 39.4496V32.7143Z" fill="#CB75BD"/>
             </svg>
         </div>
