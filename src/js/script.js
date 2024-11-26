@@ -124,10 +124,15 @@ document.addEventListener('click', (e) =>{
         $menu.classList.toggle("translate-y-0")
         if($navBarButton.matches(".active")){
             $navbar.classList.remove("bg-[rgb(0,0,0,.8)]","backdrop-blur-2xl")
+            $navbar.classList.replace("absolute","fixed")
             $logo.classList.replace("opacity-100","opacity-0")
         }
         else if(scrollY!=0){
             $menu.addEventListener("transitionend", endTransitionMenu)
+        }
+        else{
+            $navbar.classList.replace("fixed","absolute")
+            $navbar.classList.remove("transition-all")
         }
     }
 });
