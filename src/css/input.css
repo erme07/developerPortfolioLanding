@@ -40,9 +40,22 @@
     .bubble_b{
         animation: show 200ms linear 1.2s forwards;
     }
-    .show{
-        @apply text-black bg-white fixed;
+    .bars {
+        @apply size-[45px] hover:bg-white hover:text-black cursor-pointer rounded-full transition-all z-[500];
+        .line {
+            stroke-width: 4;
+            stroke-linecap: square;
+            transition: stroke-dasharray 400ms,  stroke-dashoffset 400ms;
+            &.top, &.bottom {stroke-dasharray: 40 172;}
+            &.middle {stroke-dasharray: 40 111;}
+        }
+        &.active{
+            @apply text-black bg-white;
+            .top, .bottom {stroke-dashoffset: -132px;}
+            .middle {stroke-dashoffset: -71px;}
+        }
     }
+    
     @keyframes show{
         from{
             opacity: 0;
