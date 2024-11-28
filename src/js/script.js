@@ -135,6 +135,9 @@ document.addEventListener('click', (e) =>{
             $navbar.classList.remove("transition-all")
         }
     }
+    if(e.target.getAttribute("data-name") == "acordeon-button"){
+        e.target.parentElement.parentElement.classList.toggle("acordeon-active")
+    }
 });
 
 document.addEventListener('scroll', (e) => {
