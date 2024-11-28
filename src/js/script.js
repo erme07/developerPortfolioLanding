@@ -14,6 +14,9 @@ const $customer = document.getElementById("customer");
 const $years = document.getElementById("years");
 const $projects = document.getElementById("projects");
 
+const $bubble_a = document.getElementById("bubble_a")
+const $bubble_b = document.getElementById("bubble_b")
+
 $customer.innerHTML="0+";
 $years.innerHTML="0+";
 $projects.innerHTML="0+";
@@ -36,13 +39,21 @@ const options = {
 const observerCallback = (entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            counter = setInterval(increaseNumber,70)
-        } 
+            if(entry.target==$stats)
+                counter = setInterval(increaseNumber,70)
+            if(entry.target==$bubble_a)
+                $bubble_a.classList.add("animate-[show_200ms_linear_1s_forwards]")
+            if(entry.target==$bubble_b)
+                $bubble_b.classList.add("animate-[show_200ms_linear_1.2s_forwards]")
+            observer.unobserve(entry.target)
+        }
     });
 };
 
 const observer = new IntersectionObserver(observerCallback, options);
 observer.observe($stats);
+observer.observe($bubble_a);
+observer.observe($bubble_b);
 
 const increaseNumber=()=>{
     count++;
