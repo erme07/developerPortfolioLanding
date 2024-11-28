@@ -74,8 +74,8 @@
             <div class="col-span-1 lg:col-span-5 flex justify-center lg:justify-end items-end relative">
                 <div class="bg-main w-[90%] md:w-[60%] lg:w-[300px] xl:w-[340px] 2xl:w-[410px] h-hero-height-green md:h-[500px] lg:h-[450px] 2xl:h-[600px] absolute bottom-0 rounded-[250px_250px_0_0] lg:mr-[20px]"></div>
                 <img src="./assets/img/profile.webp" alt="" class="w-full max-w-[340px] xl:max-w-[380px] 2xl:max-w-[450px] h-auto relative">
-                <div class="bubble_a font-semibold text-[18px] bg-white text-black absolute w-[210px] h-[65px] flex items-center justify-center left-0 md:left-[40px] lg:left-0 bottom-[14%] opacity-0 rounded-[20px_20px_0_20px] shadow-[-3px_-3px_0px_0px_rgba(0,0,0,0.3)_inset]">App Development</div>
-                <div class="bubble_b font-semibold text-[18px] bg-white text-black absolute w-[155px] h-[65px] flex items-center justify-center right-0 md:right-[80px] lg:right-[-20px] xl:right-[-30px] bottom-[45%] opacity-0 rounded-[20px_20px_20px_0] shadow-[-3px_-3px_0px_0px_rgba(0,0,0,0.3)_inset]">Data Analysis</div>
+                <div id="bubble_a" class="font-semibold text-[18px] bg-white text-black absolute w-[210px] h-[65px] flex items-center justify-center left-0 md:left-[40px] lg:left-0 bottom-[14%] opacity-0 rounded-[20px_20px_0_20px] shadow-[-3px_-3px_0px_0px_rgba(0,0,0,0.3)_inset]">App Development</div>
+                <div id="bubble_b" class="font-semibold text-[18px] bg-white text-black absolute w-[155px] h-[65px] flex items-center justify-center right-0 md:right-[80px] lg:right-[-20px] xl:right-[-30px] bottom-[45%] opacity-0 rounded-[20px_20px_20px_0] shadow-[-3px_-3px_0px_0px_rgba(0,0,0,0.3)_inset]">Data Analysis</div>
             </div>
             <img src="./assets/img/hojas.svg" alt="" class="hidden lg:block absolute bottom-[100px] 2xl:bottom-[110px] left-0 -translate-x-full w-[80px] 2xl:w-[100px]">
         </div>
@@ -239,42 +239,42 @@
                 </div>
                 <div class="flex lg:gap-9 justify-between costumers">
                         <div class="flex flex-col lg:flex-row items-center active-client group" data-name="client">
-                            <img src="./assets/img/client_a.webp" alt="" class=" 2xl:size-[90px] cursor-pointer rounded-full shrink-0 -outline-offset-2 sm:outline-offset-2 outline-main transition-[outline] hover:outline" title="Scarlett Thomas" data-number="0">
+                            <img src="./assets/img/client_a.webp" alt="" class="w-[80px] 2xl:w-[90px] cursor-pointer rounded-full shrink-0 -outline-offset-2 sm:outline-offset-2 outline-main transition-[outline] hover:outline" title="Scarlett Thomas" data-number="0">
                             <div class="hidden lg:block costumer overflow-hidden whitespace-nowrap max-w-0 transition-all duration-200 ml-0 group-[.active-client]:max-w-[350px] group-[.active-client]:ml-5">
                                 <h3 class="font-medium text-[24px]">Thomas Parker</h3>
                                 <p>Singapore</p>
                             </div>
                         </div>
                         <div class="flex flex-col lg:flex-row items-center group" data-name="client">
-                            <img src="./assets/img/client_b.webp" alt="" class=" 2xl:size-[90px] cursor-pointer rounded-full shrink-0 -outline-offset-2 sm:outline-offset-2 outline-main transition-[outline] hover:outline" title="Sophie Lincon" data-number="1">
+                            <img src="./assets/img/client_b.webp" alt="" class="w-[80px] 2xl:w-[90px] cursor-pointer rounded-full shrink-0 -outline-offset-2 sm:outline-offset-2 outline-main transition-[outline] hover:outline" title="Sophie Lincon" data-number="1">
                             <div class="hidden lg:block costumer overflow-hidden whitespace-nowrap max-w-0 transition-all duration-200 ml-0 group-[.active-client]:max-w-[350px] group-[.active-client]:ml-5">
                                 <h3 class="font-medium text-[24px]">Lincon Brown</h3>
                                 <p>Sidney</p>
                             </div>
                         </div>
                         <div class="flex flex-col lg:flex-row items-center group" data-name="client">
-                            <img src="./assets/img/client_c.webp" alt="" class=" 2xl:size-[90px] cursor-pointer rounded-full shrink-0 -outline-offset-2 sm:outline-offset-2 outline-main transition-[outline] hover:outline" title="Michelle Girou" data-number="2">
+                            <img src="./assets/img/client_c.webp" alt="" class="w-[80px] 2xl:w-[90px] cursor-pointer rounded-full shrink-0 -outline-offset-2 sm:outline-offset-2 outline-main transition-[outline] hover:outline" title="Michelle Girou" data-number="2">
                             <div class="hidden lg:block costumer overflow-hidden whitespace-nowrap max-w-0 transition-all duration-200 ml-0 group-[.active-client]:max-w-[350px] group-[.active-client]:ml-5">
                                 <h3 class="font-medium text-[24px]">Michelle Girou</h3>
                                 <p>Paris</p>
                             </div>
                         </div>
                         <div class="flex flex-col lg:flex-row items-center group" data-name="client">
-                            <img src="./assets/img/client_d.webp" alt="" class=" 2xl:size-[90px] cursor-pointer rounded-full shrink-0 -outline-offset-2 sm:outline-offset-2 outline-main transition-[outline] hover:outline" title="Julia De Santis" data-number="3">
+                            <img src="./assets/img/client_d.webp" alt="" class="w-[80px] 2xl:w-[90px] cursor-pointer rounded-full shrink-0 -outline-offset-2 sm:outline-offset-2 outline-main transition-[outline] hover:outline" title="Julia De Santis" data-number="3">
                             <div class="hidden lg:block costumer overflow-hidden whitespace-nowrap max-w-0 transition-all duration-200 ml-0 group-[.active-client]:max-w-[350px] group-[.active-client]:ml-5">
                                 <h3 class="font-medium text-[24px]">Julia De Santis</h3>
                                 <p>Venecia</p>
                             </div>
                         </div>
                         <div class="flex flex-col lg:flex-row items-center group" data-name="client">
-                            <img src="./assets/img/client_e.webp" alt="" class=" 2xl:size-[90px] cursor-pointer rounded-full shrink-0 -outline-offset-2 sm:outline-offset-2 outline-main transition-[outline] hover:outline" title="Aitana Ferrer" data-number="4">
+                            <img src="./assets/img/client_e.webp" alt="" class="w-[80px] 2xl:w-[90px] cursor-pointer rounded-full shrink-0 -outline-offset-2 sm:outline-offset-2 outline-main transition-[outline] hover:outline" title="Aitana Ferrer" data-number="4">
                             <div class="hidden lg:block costumer overflow-hidden whitespace-nowrap max-w-0 transition-all duration-200 ml-0 group-[.active-client]:max-w-[350px] group-[.active-client]:ml-5">
                                 <h3 class="font-medium text-[24px]">Aitana Ferrer</h3>
                                 <p>Ibiza</p>
                             </div>
                         </div>
                         <div class="flex flex-col lg:flex-row items-center group" data-name="client">
-                            <img src="./assets/img/client_f.webp" alt="" class=" 2xl:size-[90px] cursor-pointer rounded-full shrink-0 -outline-offset-2 sm:outline-offset-2 outline-main transition-[outline] hover:outline" title="Andrea Peralta" data-number="5">
+                            <img src="./assets/img/client_f.webp" alt="" class="w-[80px] 2xl:w-[90px] cursor-pointer rounded-full shrink-0 -outline-offset-2 sm:outline-offset-2 outline-main transition-[outline] hover:outline" title="Andrea Peralta" data-number="5">
                             <div class="hidden lg:block costumer overflow-hidden whitespace-nowrap max-w-0 transition-all duration-200 ml-0 group-[.active-client]:max-w-[350px] group-[.active-client]:ml-5">
                                 <h3 class="font-medium text-[24px]">Andres Peralta</h3>
                                 <p>Buenos Aires</p>

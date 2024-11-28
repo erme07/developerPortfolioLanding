@@ -10,7 +10,6 @@ module.exports = {
         'lg': '992px',
         'xl': '1160px',
         '2xl': '1367px',
-        // => @media (min-width: 1536px) { ... }
       },
       fontFamily: {
         'clash' : ['ClashDisplay', 'sans-serif'],
@@ -36,6 +35,12 @@ module.exports = {
         'third': '#FFEB5C',
         'fourth':'#5D6CBE'
       },
+      keyframes: {
+        show: {
+          'from': { opacity: '0', transform: 'translateY(50%)' },
+          'to': { opacity: '1', transform: 'translateY(0)' },
+        },
+      },
       animation: {
         'spin-slow': 'spin 7s linear infinite',
       }
@@ -46,10 +51,6 @@ module.exports = {
         DEFAULT: '15px',
         lg: '20px'
       },
-      // screens: {
-      //   // 'lg': '992px',
-      //   // 'xl': '1160px'
-      // },
     }
   },
   plugins: [],
