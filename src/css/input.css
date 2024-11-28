@@ -34,12 +34,6 @@
         focus:outline-none focus:border-third focus:ring-2 focus:ring-third
         invalid:border-red-500 invalid:text-red-200;
     }
-    .bubble_a{
-        animation: show 200ms linear 1s forwards;
-    }
-    .bubble_b{
-        animation: show 200ms linear 1.2s forwards;
-    }
     .bars {
         @apply size-[45px] 2xl:size-[60px] hover:bg-white hover:text-black cursor-pointer rounded-full transition-all z-[500];
         .line {
