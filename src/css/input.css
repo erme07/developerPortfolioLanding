@@ -30,7 +30,7 @@
         scrollbar-width: thin;
     }
     .input-form{
-        @apply bg-transparent rounded-[7px] border border-white placeholder:text-white placeholder:text-[14px] text-[14px] p-[15px] w-[340px]
+        @apply bg-transparent rounded-[7px] border border-white placeholder:text-white placeholder:text-[14px] 2xl:placeholder:text-[16px] text-[14px] 2xl:text-[16px] p-[15px] 2xl:p-[18px] w-full xl:w-[340px] 2xl:w-[400px]
         focus:outline-none focus:border-third focus:ring-2 focus:ring-third
         invalid:border-red-500 invalid:text-red-200;
     }
@@ -41,7 +41,7 @@
         animation: show 200ms linear 1.2s forwards;
     }
     .bars {
-        @apply size-[45px] hover:bg-white hover:text-black cursor-pointer rounded-full transition-all z-[500];
+        @apply size-[45px] 2xl:size-[60px] hover:bg-white hover:text-black cursor-pointer rounded-full transition-all z-[500];
         .line {
             stroke-width: 4;
             stroke-linecap: square;
